@@ -2,8 +2,8 @@ package pl.micede.spring_rest_app.configbeans;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import pl.micede.spring_rest_app.repository.CarRepository;
-import pl.micede.spring_rest_app.repository.InMemoryCarRepository;
+import pl.micede.spring_rest_app.repository.car_repo.CarRepository;
+import pl.micede.spring_rest_app.repository.car_repo.InMemoryCarRepository;
 import pl.micede.spring_rest_app.service.car_service.CarService;
 
 @Configuration

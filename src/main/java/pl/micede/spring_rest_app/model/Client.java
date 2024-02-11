@@ -4,14 +4,14 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.pl.PESEL;
-
+@Builder
 @Data
 public class Client {
 
     @NotNull
     private String firstName;
 
-    @Size()
+    @NotNull
     private String lastName;
 
     @Email
@@ -27,6 +27,6 @@ public class Client {
     @PESEL
     private String pesel;
 
-    @Email
+    @AssertTrue
     private boolean isPremium;
 }

@@ -1,12 +1,8 @@
 package pl.micede.spring_rest_app.service.car_service;
 
-import lombok.Data;
-import lombok.Getter;
-import org.springframework.stereotype.Service;
 import pl.micede.spring_rest_app.model.Car;
 import pl.micede.spring_rest_app.model.FuelType;
-import pl.micede.spring_rest_app.repository.CarRepository;
-import pl.micede.spring_rest_app.repository.InMemoryCarRepository;
+import pl.micede.spring_rest_app.repository.car_repo.CarRepository;
 
 import java.math.BigDecimal;
 import java.util.*;

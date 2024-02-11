@@ -1,4 +1,4 @@
-package pl.micede.spring_rest_app.repository;
+package pl.micede.spring_rest_app.repository.car_repo;
 
 import lombok.extern.slf4j.Slf4j;
 import pl.micede.spring_rest_app.exceptions.ExistingCarException;

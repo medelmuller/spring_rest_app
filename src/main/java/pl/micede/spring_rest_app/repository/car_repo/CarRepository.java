@@ -1,4 +1,4 @@
-package pl.micede.spring_rest_app.repository;
+package pl.micede.spring_rest_app.repository.car_repo;
 
 import org.springframework.stereotype.Repository;
 import pl.micede.spring_rest_app.model.Car;
