@@ -72,19 +72,26 @@ public class ClientRepositoryImpl implements ClientRepository{
 
     @Override
     public List<Client> updateClientsEmail(String clientPesel, String email) {
-        //TODO: poprawdzić bo nie działa!!!
-        clientList.stream()
+
+        Optional<Client> first = clientList.stream()
                 .filter(c -> c.getPesel().equals(clientPesel))
-                .map(client -> client.getEmail().replace(client.getEmail(), email))
-                .collect(Collectors.toList());
+                .findFirst();
+        first.ifPresent(client -> client.setEmail(email));
+        if(first.isEmpty()){
+            throw new NoSuchClientException(clientPesel);
+        }
+
         return new ArrayList<>(clientList);
-    } ///?????
+    }
 
 
     @Override
     public List<Client> deleteClient(String clientPesel) {
 
         boolean removed = clientList.removeIf(client -> client.getPesel().equals(clientPesel));
+        if(!removed){
+            throw new NoSuchClientException(clientPesel);
+        }
         return new ArrayList<>(clientList);
     }
 }

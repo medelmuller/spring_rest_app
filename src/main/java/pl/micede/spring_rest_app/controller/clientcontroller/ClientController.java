@@ -40,7 +40,7 @@ public class ClientController {
         return ResponseEntity.ok(clients);
     }
 
-    @PatchMapping("/updateClients")
+    @PostMapping("/updateClients")
     public ResponseEntity<List<Client>> updateClientsList(@RequestParam String pesel,@RequestParam String newEmail) {
         List<Client> clients = clientService.updateClientsEmail(pesel, newEmail);
         return ResponseEntity.ok(clients);
